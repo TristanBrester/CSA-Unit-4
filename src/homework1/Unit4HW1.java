@@ -9,8 +9,6 @@ public class Unit4HW1 {
         guessingGame();
         tiredTurtle();
         notATamagotchi();
-        System.out.print("hi");
-
     }
 
     /**
@@ -83,30 +81,28 @@ public class Unit4HW1 {
         //make the loop
         int hunger = 0;
         String answer;
-        for(int i = 0 ; i < 5; i++){
+        for (int i = 0; i < 5; i++) {
             hunger += 10;
-            if(hunger > 40){
+            if (hunger > 40) {
                 System.out.println("End of simulation. Your pet is dead.");
                 break;
             }
-            if(i < 4){
-                if(hunger < 40){
-                    System.out.printf("Hour %d: Current hunger level is %d ",(i+1),hunger);
-                }
-                else{
-                    System.out.printf("Hour %d: Current hunger level is %d Feed your animal soon, it is unhappy.\n",(i+1),hunger);
+            if (i < 4) {
+                if (hunger < 40) {
+                    System.out.printf("Hour %d: Current hunger level is %d ", (i + 1), hunger);
+                } else {
+                    System.out.printf("Hour %d: Current hunger level is %d Feed your animal soon, it is unhappy.\n", (i + 1), hunger);
                 }
                 System.out.print("Do you want to feed your pet? (yes/no):\n>");
                 answer = sc.nextLine();
-                if(answer.equals("yes")) {
+                if (answer.equals("yes")) {
                     hunger -= 25;
                     if (hunger < 0) {
                         hunger = 0;
                     }
                 }
-            }
-            else{
-                System.out.printf("Hour 5: Current hunger level is %d End of simulation. Your pet is content",hunger);
+            } else {
+                System.out.printf("Hour 5: Current hunger level is %d End of simulation. Your pet is content", hunger);
                 break;
             }
         }

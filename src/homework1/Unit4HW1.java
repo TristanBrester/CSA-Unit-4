@@ -9,6 +9,7 @@ public class Unit4HW1 {
         guessingGame();
         tiredTurtle();
         notATamagotchi();
+        System.out.print("hi");
 
     }
 
